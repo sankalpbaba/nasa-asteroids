@@ -55,5 +55,6 @@ Avg Variance: 0.005
 Accuracy: 99.43 %
 Standard Deviation: 0.97 %
 
-![Screenshot (460)](https://user-images.githubusercontent.com/90260133/144815915-51edfe51-856d-499b-9b0f-f517ac21fa15.png)
+![Screenshot (463)](https://user-images.githubusercontent.com/90260133/144816764-e000b4aa-a38a-4a04-b45e-5ce1e7e148c0.png)
+
 
