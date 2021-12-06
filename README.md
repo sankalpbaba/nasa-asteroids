@@ -24,16 +24,18 @@ The default settings of the parameters in CatBoost would do a good job.CatBoost 
 
 CATBoost works excelently with categorical features, while XGBoost only accepts numeric inputs.
 accuracy-99.33%
-Precision: 0.987
-Recall: 0.987
+Precision: 0.995
+Recall: 0.991
 
 
-![Screenshot (459)](https://user-images.githubusercontent.com/90260133/144815490-724569cf-a1fd-41f9-a572-9a79e7e9d599.png)
+![Screenshot (466)](https://user-images.githubusercontent.com/90260133/144841032-61fdb429-4d0b-427b-a487-32e5400a37a4.png)
+
 
 after k folds
-Accuracy: 99.43 %
-Standard Deviation: 0.97 %
-![Screenshot (464)](https://user-images.githubusercontent.com/90260133/144816874-17cdae81-59e2-4dd9-b71c-be00705f247f.png)
+Accuracy: 99.34 %
+Standard Deviation: 0.85 %
+![Screenshot (465)](https://user-images.githubusercontent.com/90260133/144840950-d6a41fa6-1abd-4fca-9f32-1fbc6fae6456.png)
+
 
 
 
@@ -44,18 +46,18 @@ XGBoost is a decision-tree-based ensemble Machine Learning algorithm that uses a
 
 Why does XGBoost perform so well?
  However, XGBoost improves upon the base GBM framework through systems optimization and algorithmic enhancements. The library provides a system for use in a range of computing environments, not least: Parallelization of tree construction using all of your CPU cores during training. Distributed Computing for training very large models using a cluster of machines. Out-of-Core Computing for very large datasets that don’t fit into memory. Cache Optimization of data structures and algorithm to make best use of hardware. System Optimization: 1 Parallelization: XGBoost approaches the process of sequential tree building using parallelized implementation. This is possible due to the interchangeable nature of loops used for building base learners; the outer loop that enumerates the leaf nodes of a tree, and the second inner loop that calculates the features. This nesting of loops limits parallelization because without completing the inner loop (more computationally demanding of the two), the outer loop cannot be started. Therefore, to improve run time, the order of loops is interchanged using initialization through a global scan of all instances and sorting using parallel threads. This switch improves algorithmic performance by offsetting any parallelization overheads in computation. 2 Tree Pruning: The stopping criterion for tree splitting within GBM framework is greedy in nature and depends on the negative loss criterion at the point of split. XGBoost uses ‘max_depth’ parameter as specified instead of criterion first, and starts pruning trees backward. This ‘depth-first’ approach improves computational performance significantly. 3 Hardware Optimization: This algorithm has been designed to make efficient use of hardware resources. This is accomplished by cache awareness by allocating internal buffers in each thread to store gradient statistics. Further enhancements such as ‘out-of-core’ computing optimize available disk space while handling big data-frames that do not fit into memory.
-99.5% accuracy 
+99.55% accuracy 
 Avg Bias: 0.007
 Avg Variance: 0.005
 
 
 
-![Screenshot (460)](https://user-images.githubusercontent.com/90260133/144815714-0c96babe-73ad-468d-b4ab-631c12595418.png)
+![Screenshot (467)](https://user-images.githubusercontent.com/90260133/144841225-95fcaacf-4575-43fc-a652-f234c480cb1f.png)
 
 
-Accuracy: 99.43 %
-Standard Deviation: 0.97 %
+Accuracy: 99.53 %
+Standard Deviation: 0.87 %
 
-![Screenshot (463)](https://user-images.githubusercontent.com/90260133/144816764-e000b4aa-a38a-4a04-b45e-5ce1e7e148c0.png)
+![Screenshot (468)](https://user-images.githubusercontent.com/90260133/144841286-f5ba5f7c-4f87-4822-9ff3-58d8bff13d93.png)
 
 
