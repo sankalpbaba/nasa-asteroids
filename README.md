@@ -2,7 +2,9 @@
 ** SMALL DESCRIPTION- **
 My model basically predict wether the asteriods are hazardous or non hazardous.
 I made two models , one using catboost and other using xgboost.Basically my model has one of the best accuracy with least deviation right now compare to models avaliable all over the models present right mow respective to the dataset i have used.
+
 ** THE datset has imbalanced distribution and unneccesary features. But it has been reduced and implmented in my model.It comprises of around 1512 values(small dataset).**
+
 ** INTRODUCTION **
 FOR MODEL 1 - 
 We Used catboost .
