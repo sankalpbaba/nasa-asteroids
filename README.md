@@ -33,7 +33,8 @@ Recall: 0.987
 after k folds
 Accuracy: 99.43 %
 Standard Deviation: 0.97 %
-![Screenshot (461)](https://user-images.githubusercontent.com/90260133/144815968-90723257-69f9-49af-a332-8392b8677e7c.png)
+![Screenshot (464)](https://user-images.githubusercontent.com/90260133/144816874-17cdae81-59e2-4dd9-b71c-be00705f247f.png)
+
 
 
 ** FOR MY MODEL 2- **
