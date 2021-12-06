@@ -1,7 +1,8 @@
 # nasa-asteroids
 ** SMALL DESCRIPTION- **
 My model basically predict wether the asteriods are hazardous or non hazardous.
-I made two models , one using catboost and other using xgboost.Basically my model has one of the best accuracy with least deviation right now compare to models avaliable all over the world right mow respective to the dataset i have used.
+I made two models , one using catboost and other using xgboost.Basically my model has one of the best accuracy with least deviation right now compare to models avaliable all over the models present right mow respective to the dataset i have used.
+** THE datset has imbalanced distribution and unneccesary features. But it has been reduced and implmented in my model.It comprises of around 1512 values(small dataset).**
 ** INTRODUCTION **
 FOR MODEL 1 - 
 We Used catboost .
@@ -20,16 +21,18 @@ The default settings of the parameters in CatBoost would do a good job.CatBoost 
 
 
 CATBoost works excelently with categorical features, while XGBoost only accepts numeric inputs.
-accuracy-99.36%
-Precision: 0.993
-Recall: 0.966
+accuracy-99.33%
+Precision: 0.987
+Recall: 0.987
 
 
-![Screenshot (436)](https://user-images.githubusercontent.com/90260133/142911400-f99fbe51-5686-40d1-bce0-62dd8218f8cb.png)
+![Screenshot (459)](https://user-images.githubusercontent.com/90260133/144815490-724569cf-a1fd-41f9-a572-9a79e7e9d599.png)
+
 after k folds
-Accuracy: 99.63 %
-Standard Deviation: 0.27 %
-![Screenshot (439)](https://user-images.githubusercontent.com/90260133/142911478-7b1b02aa-948f-421d-aa03-838ec742b2bf.png)
+Accuracy: 99.43 %
+Standard Deviation: 0.97 %
+![Screenshot (461)](https://user-images.githubusercontent.com/90260133/144815968-90723257-69f9-49af-a332-8392b8677e7c.png)
+
 
 ** FOR MY MODEL 2- **
 ** XGBOOST **
@@ -38,16 +41,17 @@ XGBoost is a decision-tree-based ensemble Machine Learning algorithm that uses a
 
 Why does XGBoost perform so well?
  However, XGBoost improves upon the base GBM framework through systems optimization and algorithmic enhancements. The library provides a system for use in a range of computing environments, not least: Parallelization of tree construction using all of your CPU cores during training. Distributed Computing for training very large models using a cluster of machines. Out-of-Core Computing for very large datasets that don’t fit into memory. Cache Optimization of data structures and algorithm to make best use of hardware. System Optimization: 1 Parallelization: XGBoost approaches the process of sequential tree building using parallelized implementation. This is possible due to the interchangeable nature of loops used for building base learners; the outer loop that enumerates the leaf nodes of a tree, and the second inner loop that calculates the features. This nesting of loops limits parallelization because without completing the inner loop (more computationally demanding of the two), the outer loop cannot be started. Therefore, to improve run time, the order of loops is interchanged using initialization through a global scan of all instances and sorting using parallel threads. This switch improves algorithmic performance by offsetting any parallelization overheads in computation. 2 Tree Pruning: The stopping criterion for tree splitting within GBM framework is greedy in nature and depends on the negative loss criterion at the point of split. XGBoost uses ‘max_depth’ parameter as specified instead of criterion first, and starts pruning trees backward. This ‘depth-first’ approach improves computational performance significantly. 3 Hardware Optimization: This algorithm has been designed to make efficient use of hardware resources. This is accomplished by cache awareness by allocating internal buffers in each thread to store gradient statistics. Further enhancements such as ‘out-of-core’ computing optimize available disk space while handling big data-frames that do not fit into memory.
-99.46% accuracy 
-Avg Bias: 0.005
-Avg Variance: 0.001
+99.5% accuracy 
+Avg Bias: 0.007
+Avg Variance: 0.005
 
 
 
-![Screenshot (441)](https://user-images.githubusercontent.com/90260133/142911602-a963693f-a34b-4f40-9d7d-d96e416b995d.png)
+![Screenshot (460)](https://user-images.githubusercontent.com/90260133/144815714-0c96babe-73ad-468d-b4ab-631c12595418.png)
 
-Accuracy: 99.71 %
-Standard Deviation: 0.28 %
-![Screenshot (441)](https://user-images.githubusercontent.com/90260133/142911640-2a49f390-8537-40df-ba32-bc0176fa73ef.png)
 
+Accuracy: 99.43 %
+Standard Deviation: 0.97 %
+
+![Screenshot (460)](https://user-images.githubusercontent.com/90260133/144815915-51edfe51-856d-499b-9b0f-f517ac21fa15.png)
 
